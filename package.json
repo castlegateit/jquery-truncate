@@ -1,0 +1,21 @@
+{
+  "name": "jquery-truncate",
+  "version": "1.0.0",
+  "description": "Multi-line text-overflow",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:castlegateit/jquery-truncate.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4",
+    "gulp-util": "^3.0.7"
+  }
+}
