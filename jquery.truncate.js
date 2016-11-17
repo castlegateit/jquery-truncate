@@ -41,6 +41,12 @@
 
     // Truncate the content of the element to fit in the element
     Plugin.prototype.truncate = function() {
+        // We cannot truncate the content of elements that are hidden because
+        // they may not have a height or width.
+        if ($(this.element).is(':hidden')) {
+            return;
+        }
+
         // Reset and re-measure the element
         this.reset();
         this.measure();
