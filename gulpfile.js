@@ -1,20 +1,50 @@
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
+// jshint node: true, esversion: 6
 
-gulp.task('default', function() {
-    return gulp.src('jquery.truncate.js')
-        .pipe(rename({
-            extname: '.min.js'
-        }))
-        .pipe(uglify()).on('error', function(error) {
-            gutil.log(error.toString());
-            this.emit('end')
-        })
-        .pipe(gulp.dest('.'))
-});
+// Strict mode
+'use strict';
 
-gulp.task('watch', ['default'], function() {
-    gulp.watch('jquery.truncate.js', ['default']);
-});
+// Configuration
+const name = 'jquery.truncate.js';
+const src = './src/*.js';
+const dest = './dist';
+
+// Modules
+const del = require('del');
+const gulp = require('gulp');
+
+// Plugins
+const plumber = require('gulp-plumber');
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
+const wrap = require('gulp-wrap');
+
+// Tasks
+function clean() {
+    return del(dest);
+}
+
+function compile() {
+    return gulp.src(src)
+        .pipe(plumber())
+
+        // Write uncompressed development version
+        .pipe(wrap(';(function($) {"use strict"; \n<%= contents %>\n})(jQuery);'))
+        .pipe(rename(name))
+        .pipe(gulp.dest(dest))
+
+        // Write compressed production version
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
+        .pipe(gulp.dest(dest));
+}
+
+function watchTask() {
+    gulp.watch(src, build);
+}
+
+const build = gulp.series(clean, compile);
+const watch = gulp.parallel(build, watchTask);
+
+// Public tasks
+exports.default = build;
+exports.watch = watch;

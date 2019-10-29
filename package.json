@@ -1,6 +1,6 @@
 {
   "name": "jquery-truncate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Multi-line text-overflow",
   "main": "gulpfile.js",
   "scripts": {
@@ -13,9 +13,11 @@
   "author": "",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.5.4",
-    "gulp-util": "^3.0.7"
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-wrap": "^0.15.0"
   }
 }
