@@ -1,6 +1,6 @@
 {
   "name": "castlegate-truncate",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Multi-line text-overflow",
   "main": "gulpfile.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "github:castlegateit/truncate.git"
   },
   "author": "",
-  "license": "AGPL-3.0-or-later",
+  "license": "GPL-3.0-or-later",
   "devDependencies": {
     "del": "^5.1.0",
     "gulp": "^4.0.2",
