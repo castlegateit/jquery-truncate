@@ -1,6 +1,6 @@
 {
-  "name": "jquery-truncate",
-  "version": "1.1.0",
+  "name": "castlegate-truncate",
+  "version": "1.2.0",
   "description": "Multi-line text-overflow",
   "main": "gulpfile.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github:castlegateit/jquery-truncate.git"
+    "url": "github:castlegateit/truncate.git"
   },
   "author": "",
   "license": "AGPL-3.0-or-later",

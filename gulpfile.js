@@ -4,7 +4,7 @@
 'use strict';
 
 // Configuration
-const name = 'jquery.truncate.js';
+const name = 'truncate.js';
 const src = './src/*.js';
 const dest = './dist';
 

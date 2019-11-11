@@ -1,4 +1,4 @@
-# jQuery Truncate
+# Truncate
 
 Provides responsive, multi-line [text-overflow](https://developer.mozilla.org/en/docs/Web/CSS/text-overflow) using jQuery. If an element has fixed or maximum height, this will ensure that the text fits inside the element:
 
@@ -20,7 +20,7 @@ If you do not set a limit on the height of the element and you do not set a numb
 
 Install with npm:
 
-    npm install --save-dev github:castlegateit/jquery-truncate
+    npm install --save-dev castlegate-truncate
 
 ## Limitations
 
