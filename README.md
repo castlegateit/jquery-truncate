@@ -20,7 +20,7 @@ If you do not set a limit on the height of the element and you do not set a numb
 
 Install with npm:
 
-    npm install --save-dev castlegate-truncate
+    npm install --save-dev @castlegate/jquery-truncate
 
 ## Limitations
 
